@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Vanessa Personal Trainer</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1 class="titulo">Vanessa Personal Trainer</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Meus alunos</h2>
+				<label for ="filtrar-tabela">Filtre:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="digite o nome do aluno">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>Gordura Corporal(%)</th>
+							<th>IMC</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+						<tr class="paciente" >
+							<td class="info-nome">Rodrigo</td>
+							<td class="info-peso">1000</td>
+							<td class="info-altura">2.00</td>
+							<td class="info-gordura">10</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="paciente" >
+							<td class="info-nome">Jânio</td>
+							<td class="info-peso">80</td>
+							<td class="info-altura">5.00</td>
+							<td class="info-gordura">40</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="paciente" >
+							<td class="info-nome">Túlio</td>
+							<td class="info-peso">76</td>
+							<td class="info-altura">1.60</td>
+							<td class="info-gordura">14</td>
+							<td class="info-imc">0</td>
+						</tr>
+
+						<tr class="paciente">
+							<td class="info-nome">Viviane</td>
+							<td class="info-peso">55</td>
+							<td class="info-altura">1.57</td>
+							<td class="info-gordura">24</td>
+							<td class="info-imc">0</td>
+						</tr>
+						<tr class="paciente" >
+							<td class="info-nome">Adriana</td>
+							<td class="info-peso">56</td>
+							<td class="info-altura">1.68</td>
+							<td class="info-gordura">19</td>
+							<td class="info-imc">0</td>
+						</tr>
+					</tbody>
+				</table>
+				<spam id="erro-ajax" class="invisivel">Erro ao buscar os alunos</spam>
+				<button id="buscar-pacientes" class="botao bto-principal">Buscar Alunos</button>
+			</section>
+		</main>
+		<section class="container">
+			<h2 id="titulo-form">Adicionar novo aluno</h2>
+			<ul id="mensagens-erro"></ul>
+			<form id="form-adiciona">
+				<div class="">
+					<label for="nome">Nome:</label>
+					<input id="nome" name="nome" type="text" placeholder="digite o nome do seu aluno" class="campo">
+				</div>
+				<div class="grupo">
+					<label for="peso">Peso:</label>
+					<input id="peso" name="peso" type="text" placeholder="digite o peso do aluno" class="campo campo-medio">
+				</div>
+				<div class="grupo">
+					<label for="altura">Altura:</label>
+					<input id="altura" name="altura" type="text" placeholder="digite a altura do aluno" class="campo campo-medio">
+				</div>
+				<div class="grupo">
+					<label for="gordura">% de Gordura:</label>
+					<input id="gordura" name="gordura" type="text" placeholder="digite a porcentagem de gordura do aluno" class="campo campo-medio">
+				</div>
+		
+				<button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+			</form>
+		</section>
+		<script src="js/calcula-imc.js"></script>
+		<script src="js/form.js"></script>
+		<script src="js/remover-paciente.js"></script>
+		<script src="js/filtra.js"></script>
+		<script src="js/buscar-pacientes.js"></script>
+	</body>
+	
+</html>
